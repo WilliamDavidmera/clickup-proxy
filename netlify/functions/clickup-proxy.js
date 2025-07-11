@@ -42,13 +42,12 @@ exports.handler = async (event, context) => {
     
     console.log('Received task data:', JSON.stringify(taskData, null, 2));
 
-    // Preparar datos para ClickUp
-    const clickupData = {
-      name: taskData.name || taskData.title || 'Tarea desde N8N',
-      description: taskData.description || 'Descripción automática',
-      status: 'to do',
-      priority: taskData.priority || 3
-    };
+   // Preparar datos para ClickUp
+const clickupData = {
+  name: taskData.name || taskData.title || 'Tarea desde N8N',
+  description: taskData.description || 'Descripción automática',
+  priority: taskData.priority || 3
+};
 
     console.log('Sending to ClickUp:', JSON.stringify(clickupData, null, 2));
 
