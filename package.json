@@ -1,9 +1,5 @@
-{
-  "name": "clickup-proxy",
-  "version": "1.0.0",
-  "description": "Netlify proxy for ClickUp API integration with N8N",
-  "main": "netlify/functions/clickup-proxy.js",
-  "dependencies": {
-    "node-fetch": "^2.6.1"
-  }
-}
+const clickupData = {
+  name: taskData.name || taskData.title || 'Tarea desde N8N',
+  description: taskData.description || 'Descripción automática',
+  priority: taskData.priority || 3
+};
