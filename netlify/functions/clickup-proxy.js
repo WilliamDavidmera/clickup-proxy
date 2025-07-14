@@ -54,7 +54,7 @@ exports.handler = async (event, context) => {
           name: task.name || 'Tarea sin título',
           description: task.description || 'Sin descripción',
           priority: task.priority || 3,
-          status: task.status || 'to do',
+          status: 'Open',
           tags: task.tags || []
         };
         
